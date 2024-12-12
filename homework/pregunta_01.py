@@ -37,7 +37,7 @@ def pregunta_01():
     data_cleaned = data.drop(columns=["Unnamed: 0"])
 
 
-    data_cleaned['monto_del_credito'] = data_cleaned['monto_del_credito'].replace({'\$': '', ',': '', ' ': ''}, regex=True)
+    data_cleaned['monto_del_credito'] = data_cleaned['monto_del_credito'].replace({'\\$': '', ',': '', ' ': ''}, regex=True)
     data_cleaned['barrio'] = data_cleaned['barrio'].str.replace('_', ' ').str.replace('-', ' ')
     data_cleaned['idea_negocio'] = data_cleaned['idea_negocio'].str.replace('_', ' ').str.replace('-', ' ')
     data_cleaned['línea_credito'] = data_cleaned['línea_credito'].str.replace('-', ' ').str.replace('_', ' ')
